@@ -1,18 +1,23 @@
 {
-  "pluginName": "calendar",
-  "description": "日历",
-  "version": "0.0.4",
-  "main": "dist/index.html",
-  "preload": "dist/preload.js",
+  "pluginName": "keycode",
+  "description": "键码",
+  "version": "0.0.1",
+  "main": "index.html",
   "author": "xkloveme",
   "homepage": "https://github.com/xkloveme",
-  "logo": "dist/icon.png",
+  "logo": "icon.png",
   "features": [
     {
-      "code": "calendar",
-      "explain": "日历",
-      "cmds": ["calendar", "日历", "时间"],
-      "icon": "dist/icon.png"
+      "code": "键码",
+      "explain": "键码",
+      "cmds": ["键码", "按键",
+        {
+          "type": "regex",
+          "label": "键码",
+          "match": "/[a-zA-Z\u4e00-\u9fa5]/gm",
+          "minLength": 0
+      }],
+      "icon": "icon.png"
     }
   ]
 }
